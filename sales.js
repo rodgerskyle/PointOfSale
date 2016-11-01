@@ -7,6 +7,7 @@ function addItem()
   if (isNaN(newItem)){
     window.alert ("Enter price as a number");
   }
+  else newItem = number(newItem);
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
   //OTHERWISE,
