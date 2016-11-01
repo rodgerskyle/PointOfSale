@@ -8,7 +8,7 @@ function addItem()
     window.alert ("Enter price as a number");
   }
   else {
-    newItem = Number(newItem)
+    newItem = Number(newItem);
     runningTotal = runningTotal + newItem;
     var dollars;
     dollars = asCurrency(runningTotal);
