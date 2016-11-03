@@ -27,6 +27,15 @@ function addItem()
   // update the value of the input with the id "price" to be an empty string
   // update a cookie called "preTax" with the value of runningTotal
 }
+function calculateRecipt(){
+  var receiptSubtotal = Number(receiptSubtotal);
+  receiptSubtotal = getCookie("preTax");
+  var receiptTax = receiptSubtotal * .075;
+  var receiptTotal = receiptSubtotal + receiptTax;
+  document.getElementById("sub").innerHTML = asCurrency(receiptSubtotal);
+  document.getElementById("tax").innerHTML = asCurrency(receiptTax);
+  document.getElementById("tot").innerHTML = asCurrency(receiptTotal);
+}
 
 //takes a number and gives a string with the number displayed as USD currency
 function asCurrency(val)
